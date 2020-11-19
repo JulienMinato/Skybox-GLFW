@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ECCED71225670EC7006BFB0D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCED71125670EC7006BFB0D /* OpenGL.framework */; };
+		ECCED71425670EF7006BFB0D /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCED71325670EF7006BFB0D /* libglfw.3.3.dylib */; };
+		ECCED71725670F31006BFB0D /* libassimp.5.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCED71625670F31006BFB0D /* libassimp.5.0.0.dylib */; };
+		ECCED71A25670F46006BFB0D /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCED71925670F46006BFB0D /* GLUT.framework */; };
+		ECCED71F25671173006BFB0D /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = ECCED71E25671173006BFB0D /* glad.c */; };
 		ECF94F71255F723D002A574F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECF94F70255F723D002A574F /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +28,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ECCED71125670EC7006BFB0D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		ECCED71325670EF7006BFB0D /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../../usr/local/Cellar/glfw/3.3.2/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
+		ECCED71625670F31006BFB0D /* libassimp.5.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.5.0.0.dylib; path = ../../../../../../usr/local/Cellar/assimp/5.0.1/lib/libassimp.5.0.0.dylib; sourceTree = "<group>"; };
+		ECCED71925670F46006BFB0D /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		ECCED71E25671173006BFB0D /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glad.c; sourceTree = "<group>"; };
+		ECCED727256717A7006BFB0D /* skybox.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = skybox.vs; sourceTree = "<group>"; };
+		ECCED728256717A7006BFB0D /* skybox.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = skybox.fs; sourceTree = "<group>"; };
+		ECCED72A25671879006BFB0D /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+		ECCED72C256718B1006BFB0D /* filesystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = filesystem.h; sourceTree = "<group>"; };
 		ECF94F6D255F723D002A574F /* Skybox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Skybox; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF94F70255F723D002A574F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,17 +46,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECCED71A25670F46006BFB0D /* GLUT.framework in Frameworks */,
+				ECCED71725670F31006BFB0D /* libassimp.5.0.0.dylib in Frameworks */,
+				ECCED71425670EF7006BFB0D /* libglfw.3.3.dylib in Frameworks */,
+				ECCED71225670EC7006BFB0D /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ECCED71025670EC7006BFB0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECCED71925670F46006BFB0D /* GLUT.framework */,
+				ECCED71625670F31006BFB0D /* libassimp.5.0.0.dylib */,
+				ECCED71325670EF7006BFB0D /* libglfw.3.3.dylib */,
+				ECCED71125670EC7006BFB0D /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ECF94F64255F723D002A574F = {
 			isa = PBXGroup;
 			children = (
 				ECF94F6F255F723D002A574F /* Skybox */,
 				ECF94F6E255F723D002A574F /* Products */,
+				ECCED71025670EC7006BFB0D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,7 +87,12 @@
 		ECF94F6F255F723D002A574F /* Skybox */ = {
 			isa = PBXGroup;
 			children = (
+				ECCED72A25671879006BFB0D /* Resources */,
+				ECCED71E25671173006BFB0D /* glad.c */,
+				ECCED72C256718B1006BFB0D /* filesystem.h */,
 				ECF94F70255F723D002A574F /* main.cpp */,
+				ECCED728256717A7006BFB0D /* skybox.fs */,
+				ECCED727256717A7006BFB0D /* skybox.vs */,
 			);
 			path = Skybox;
 			sourceTree = "<group>";
@@ -119,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECF94F71255F723D002A574F /* main.cpp in Sources */,
+				ECCED71F25671173006BFB0D /* glad.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +178,7 @@
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -176,6 +212,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -201,7 +238,7 @@
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -229,6 +266,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -240,7 +278,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.3.2/lib,
+					/usr/local/Cellar/assimp/5.0.1/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_WORKSPACE_SKIPPED_SDK_FRAMEWORKS = OpenGL;
 			};
 			name = Debug;
 		};
@@ -248,7 +292,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.3.2/lib,
+					/usr/local/Cellar/assimp/5.0.1/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_WORKSPACE_SKIPPED_SDK_FRAMEWORKS = OpenGL;
 			};
 			name = Release;
 		};
