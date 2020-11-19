@@ -3,6 +3,7 @@
 
 #include <MyGLFWLib/shader.h>
 
+#include "filesystem.h"
 #include <iostream>
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -47,7 +48,7 @@ int main()
 
     // build and compile our shader program
     // ------------------------------------
-    Shader ourShader("3.3.shader.vs", "3.3.shader.fs"); // you can name your shader files however you like
+    Shader ourShader(FileSystem::getPath("skybox.vs").c_str(), FileSystem::getPath("skybox.fs").c_str()); // you can name your shader files however you like
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
