@@ -29,6 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EC81C71A25698FF8006ECBC6 /* light.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = light.fs; sourceTree = "<group>"; };
+		EC81C71B25699009006ECBC6 /* light.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = light.vs; sourceTree = "<group>"; };
 		ECBD69502568D88B000D5332 /* nanosuit.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = nanosuit.fs; sourceTree = "<group>"; };
 		ECBD69512568D89F000D5332 /* nanosuit.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = nanosuit.vs; sourceTree = "<group>"; };
 		ECCED71125670EC7006BFB0D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -99,6 +101,8 @@
 				ECCED727256717A7006BFB0D /* skybox.vs */,
 				ECBD69502568D88B000D5332 /* nanosuit.fs */,
 				ECBD69512568D89F000D5332 /* nanosuit.vs */,
+				EC81C71A25698FF8006ECBC6 /* light.fs */,
+				EC81C71B25699009006ECBC6 /* light.vs */,
 			);
 			path = Skybox;
 			sourceTree = "<group>";
