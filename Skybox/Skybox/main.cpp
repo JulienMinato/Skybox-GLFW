@@ -79,8 +79,15 @@ int main()
 
     // build and compile shaders
     // -------------------------
-    Shader shader(FileSystem::getPath("cubemap.vs").c_str(), FileSystem::getPath("cubemap.fs").c_str());
+    //Shader shader(FileSystem::getPath("cubemap.vs").c_str(), FileSystem::getPath("cubemap.fs").c_str());
     Shader skyboxShader(FileSystem::getPath("skybox.vs").c_str(), FileSystem::getPath("skybox.fs").c_str());
+    
+    Shader suitShader(FileSystem::getPath("nanosuit.vs").c_str(), FileSystem::getPath("nanosuit.fs").c_str());
+    
+    // load models
+    // -----------
+    Model suitModel(FileSystem::getPath("Resources/nanosuit/nanosuit.obj"));
+    
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
@@ -209,8 +216,8 @@ int main()
 
     // shader configuration
     // --------------------
-    shader.use();
-    shader.setInt("skybox", 0);
+    suitShader.use();
+    suitShader.setInt("suit", 0);
 
     skyboxShader.use();
     skyboxShader.setInt("skybox", 0);
@@ -235,21 +242,23 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         // draw scene as normal
-        shader.use();
+        suitShader.use();
         glm::mat4 model = glm::mat4(1.0f);
         glm::mat4 view = camera.GetViewMatrix();
         glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
-        shader.setMat4("model", model);
-        shader.setMat4("view", view);
-        shader.setMat4("projection", projection);
-        shader.setVec3("cameraPos", camera.Position);
-        // cubes
-        glBindVertexArray(cubeVAO);
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
-        glBindVertexArray(0);
+        suitShader.setMat4("model", model);
+        suitShader.setMat4("view", view);
+        suitShader.setMat4("projection", projection);
+        suitShader.setVec3("cameraPos", camera.Position);
+        
+        // suitShader
+        // render the loaded model
+        model = glm::translate(model, glm::vec3(0.0f, -1.75f, 0.0f)); // translate it down so it's at the center of the scene
+        model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));    // it's a bit too big for our scene, so scale it down
+        suitShader.setMat4("model", model);
+        suitModel.Draw(suitShader);
 
+        
         // draw skybox as last
         glDepthFunc(GL_LEQUAL);  // change depth function so depth test passes when values are equal to depth buffer's content
         skyboxShader.use();
@@ -263,6 +272,9 @@ int main()
         glDrawArrays(GL_TRIANGLES, 0, 36);
         glBindVertexArray(0);
         glDepthFunc(GL_LESS); // set depth function back to default
+        
+        
+        
 
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         // -------------------------------------------------------------------------------
@@ -346,11 +358,13 @@ unsigned int loadTexture(char const * path)
     if (data)
     {
         GLenum format;
+        format = GL_RED;
         if (nrComponents == 1)
             format = GL_RED;
         else if (nrComponents == 3)
             format = GL_RGB;
-        else if (nrComponents == 4)
+        else if
+            (nrComponents == 4)
             format = GL_RGBA;
 
         glBindTexture(GL_TEXTURE_2D, textureID);
