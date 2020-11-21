@@ -29,8 +29,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		ECBD694A2568C92F000D5332 /* cubemap.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = cubemap.fs; sourceTree = "<group>"; };
-		ECBD694B2568C942000D5332 /* cubemap.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = cubemap.vs; sourceTree = "<group>"; };
 		ECBD69502568D88B000D5332 /* nanosuit.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = nanosuit.fs; sourceTree = "<group>"; };
 		ECBD69512568D89F000D5332 /* nanosuit.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = nanosuit.vs; sourceTree = "<group>"; };
 		ECCED71125670EC7006BFB0D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -99,8 +97,6 @@
 				ECF94F70255F723D002A574F /* main.cpp */,
 				ECCED728256717A7006BFB0D /* skybox.fs */,
 				ECCED727256717A7006BFB0D /* skybox.vs */,
-				ECBD694A2568C92F000D5332 /* cubemap.fs */,
-				ECBD694B2568C942000D5332 /* cubemap.vs */,
 				ECBD69502568D88B000D5332 /* nanosuit.fs */,
 				ECBD69512568D89F000D5332 /* nanosuit.vs */,
 			);
