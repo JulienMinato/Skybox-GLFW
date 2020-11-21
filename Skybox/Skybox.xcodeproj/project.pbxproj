@@ -28,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ECBD694A2568C92F000D5332 /* cubemap.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = cubemap.fs; sourceTree = "<group>"; };
+		ECBD694B2568C942000D5332 /* cubemap.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = cubemap.vs; sourceTree = "<group>"; };
 		ECCED71125670EC7006BFB0D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		ECCED71325670EF7006BFB0D /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../../usr/local/Cellar/glfw/3.3.2/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 		ECCED71625670F31006BFB0D /* libassimp.5.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.5.0.0.dylib; path = ../../../../../../usr/local/Cellar/assimp/5.0.1/lib/libassimp.5.0.0.dylib; sourceTree = "<group>"; };
@@ -93,6 +95,8 @@
 				ECF94F70255F723D002A574F /* main.cpp */,
 				ECCED728256717A7006BFB0D /* skybox.fs */,
 				ECCED727256717A7006BFB0D /* skybox.vs */,
+				ECBD694A2568C92F000D5332 /* cubemap.fs */,
+				ECBD694B2568C942000D5332 /* cubemap.vs */,
 			);
 			path = Skybox;
 			sourceTree = "<group>";
