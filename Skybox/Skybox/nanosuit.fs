@@ -19,11 +19,11 @@ void main()
 //    vec3 I = normalize(Position - cameraPos);
 //    vec3 R = refract(I, normalize(Normal), ratio);
 //    FragColor = vec4(texture(skybox, R).rgb, 1.0);
-//
+
 //    vec3 I = normalize(Position - cameraPos);
 //    vec3 R = reflect(I, normalize(Normal));
 //    FragColor = vec4(texture(skybox, R).rgb, 1.0);
-//
+
     
     vec3 viewDir = normalize(cameraPos - Position);
     vec3 normal = normalize(Normal);
