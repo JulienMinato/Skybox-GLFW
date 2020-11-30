@@ -20,11 +20,19 @@ void main()
 //    vec3 R = refract(I, normalize(Normal), ratio);
 //    FragColor = vec4(texture(skybox, R).rgb, 1.0);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 //    vec3 I = normalize(Position - cameraPos);
 //    vec3 R = reflect(I, normalize(Normal));
 //    FragColor = vec4(texture(skybox, R).rgb, 1.0);
 
+=======
+    
+//    vec3 I = normalize(Position - cameraPos);
+//    vec3 R = reflect(I, normalize(Normal));
+//    FragColor = vec4(texture(skybox, R).rgb, 1.0);
+    
+>>>>>>> parent of d473e03... some updata
 =======
     
 //    vec3 I = normalize(Position - cameraPos);
