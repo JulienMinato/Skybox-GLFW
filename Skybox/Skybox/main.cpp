@@ -15,9 +15,9 @@
 #include <iostream>
 
 //loading imgui
-#include <imgui/imgui.h>
-#include <imgui/backends/imgui_impl_glfw.h>
-#include <imgui/backends/imgui_impl_opengl3.h>
+#include "imgui.h"
+#include "imgui_impl_glfw.h"
+#include "imgui_impl_opengl3.h"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
@@ -40,8 +40,19 @@ bool firstMouse = true;
 float deltaTime = 0.0f;
 float lastFrame = 0.0f;
 
+static void glfw_error_callback(int error, const char* description)
+{
+    fprintf(stderr, "Glfw Error %d: %s\n", error, description);
+}
+
 int main()
 {
+    // Setup window
+    glfwSetErrorCallback(glfw_error_callback);
+    if (!glfwInit())
+        return 1;
+    
+    
     // glfw: initialize and configure
     // ------------------------------
     glfwInit();
@@ -62,7 +73,11 @@ int main()
         glfwTerminate();
         return -1;
     }
+    
+
     glfwMakeContextCurrent(window);
+    glfwSwapInterval(1); // Enable vsync
+    
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     glfwSetCursorPosCallback(window, mouse_callback);
     glfwSetScrollCallback(window, scroll_callback);
@@ -176,17 +191,13 @@ int main()
     suitShader.setInt("texture1", 3);
     
     // Decide GL+GLSL versions
-
-#ifdef __APPLE__
+    
     // GL 3.2 + GLSL 150
     const char* glsl_version = "#version 150";
     
-#else
 
-    // GL 3.0 + GLSL 130
-    const char* glsl_version = "#version 130";
 
-#endif
+
     
     // Setup Dear ImGui context
     IMGUI_CHECKVERSION();
@@ -214,6 +225,20 @@ int main()
     // -----------
     while (!glfwWindowShouldClose(window))
     {
+        // Poll and handle events (inputs, window resize, etc.)
+        // You can read the io.WantCaptureMouse, io.WantCaptureKeyboard flags to tell if dear imgui wants to use your inputs.
+        // - When io.WantCaptureMouse is true, do not dispatch mouse input data to your main application.
+        // - When io.WantCaptureKeyboard is true, do not dispatch keyboard input data to your main application.
+        // Generally you may always pass all inputs to dear imgui, and hide them from your application based on those two flags.
+        
+        glfwPollEvents();
+
+        // Start the Dear ImGui frame
+        ImGui_ImplOpenGL3_NewFrame();
+        ImGui_ImplGlfw_NewFrame();
+        ImGui::NewFrame();
+        
+        
         // per-frame time logic
         // --------------------
         float currentFrame = glfwGetTime();
@@ -268,17 +293,7 @@ int main()
         glDepthFunc(GL_LESS); // set depth function back to default
 
         
-        // Poll and handle events (inputs, window resize, etc.)
-        // You can read the io.WantCaptureMouse, io.WantCaptureKeyboard flags to tell if dear imgui wants to use your inputs.
-        // - When io.WantCaptureMouse is true, do not dispatch mouse input data to your main application.
-        // - When io.WantCaptureKeyboard is true, do not dispatch keyboard input data to your main application.
-        // Generally you may always pass all inputs to dear imgui, and hide them from your application based on those two flags.
-        glfwPollEvents();
 
-        // Start the Dear ImGui frame
-        ImGui_ImplOpenGL3_NewFrame();
-        ImGui_ImplGlfw_NewFrame();
-        ImGui::NewFrame();
 
         // 1. Show the big demo window (Most of the sample code is in ImGui::ShowDemoWindow()! You can browse its code to learn more about Dear ImGui!).
         if (show_demo_window)
@@ -333,7 +348,7 @@ int main()
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         // -------------------------------------------------------------------------------
         glfwSwapBuffers(window);
-        glfwPollEvents();
+        //glfwPollEvents();
     }
 
     // optional: de-allocate all resources once they've outlived their purpose:
