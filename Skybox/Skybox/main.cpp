@@ -14,6 +14,9 @@
 
 #include <iostream>
 
+//loading imgui
+#include <imgui/imgui.h>
+
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
@@ -169,6 +172,7 @@ int main()
     
     suitShader.use();
     suitShader.setInt("texture1", 3);
+    
     
     
     // render loop

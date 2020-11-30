@@ -1,4 +1,5 @@
-*.xcuserstate
-Skybox/Skybox/.DS_Store
-*.xcuserstate
-Skybox/Skybox.xcodeproj/project.xcworkspace/xcuserdata/liang.xcuserdatad/UserInterfaceState.xcuserstate
+## OSX artifacts
+.DS_Store
+## Xcode artifacts
+project.xcworkspace
+xcuserdata
