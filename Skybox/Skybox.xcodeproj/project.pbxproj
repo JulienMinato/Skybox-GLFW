@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		ECBD694D2568D7D4000D5332 /* libassimp.5.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCED71625670F31006BFB0D /* libassimp.5.0.0.dylib */; };
+		ECC24FFA2575B52E0034354A /* imgui_impl_glfw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECC24FEE2575B52D0034354A /* imgui_impl_glfw.cpp */; };
+		ECC24FFB2575B52E0034354A /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECC24FF12575B52D0034354A /* imgui_draw.cpp */; };
+		ECC24FFC2575B52E0034354A /* imgui_impl_opengl3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECC24FF32575B52E0034354A /* imgui_impl_opengl3.cpp */; };
+		ECC24FFD2575B52E0034354A /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECC24FF72575B52E0034354A /* imgui.cpp */; };
+		ECC24FFE2575B52E0034354A /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECC24FF82575B52E0034354A /* imgui_demo.cpp */; };
+		ECC24FFF2575B52E0034354A /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECC24FF92575B52E0034354A /* imgui_widgets.cpp */; };
 		ECCED71225670EC7006BFB0D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCED71125670EC7006BFB0D /* OpenGL.framework */; };
 		ECCED71425670EF7006BFB0D /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCED71325670EF7006BFB0D /* libglfw.3.3.dylib */; };
 		ECCED71725670F31006BFB0D /* libassimp.5.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCED71625670F31006BFB0D /* libassimp.5.0.0.dylib */; };
@@ -33,6 +39,20 @@
 		EC81C71B25699009006ECBC6 /* light.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = light.vs; sourceTree = "<group>"; };
 		ECBD69502568D88B000D5332 /* nanosuit.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = nanosuit.fs; sourceTree = "<group>"; };
 		ECBD69512568D89F000D5332 /* nanosuit.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = nanosuit.vs; sourceTree = "<group>"; };
+		ECC24FEC2575B52D0034354A /* imgui_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_internal.h; sourceTree = "<group>"; };
+		ECC24FED2575B52D0034354A /* imstb_textedit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imstb_textedit.h; sourceTree = "<group>"; };
+		ECC24FEE2575B52D0034354A /* imgui_impl_glfw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_impl_glfw.cpp; sourceTree = "<group>"; };
+		ECC24FEF2575B52D0034354A /* imstb_truetype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imstb_truetype.h; sourceTree = "<group>"; };
+		ECC24FF02575B52D0034354A /* imconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imconfig.h; sourceTree = "<group>"; };
+		ECC24FF12575B52D0034354A /* imgui_draw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_draw.cpp; sourceTree = "<group>"; };
+		ECC24FF22575B52E0034354A /* imgui_impl_opengl3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_impl_opengl3.h; sourceTree = "<group>"; };
+		ECC24FF32575B52E0034354A /* imgui_impl_opengl3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_impl_opengl3.cpp; sourceTree = "<group>"; };
+		ECC24FF42575B52E0034354A /* imgui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui.h; sourceTree = "<group>"; };
+		ECC24FF52575B52E0034354A /* imstb_rectpack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imstb_rectpack.h; sourceTree = "<group>"; };
+		ECC24FF62575B52E0034354A /* imgui_impl_glfw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_impl_glfw.h; sourceTree = "<group>"; };
+		ECC24FF72575B52E0034354A /* imgui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui.cpp; sourceTree = "<group>"; };
+		ECC24FF82575B52E0034354A /* imgui_demo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_demo.cpp; sourceTree = "<group>"; };
+		ECC24FF92575B52E0034354A /* imgui_widgets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_widgets.cpp; sourceTree = "<group>"; };
 		ECCED71125670EC7006BFB0D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		ECCED71325670EF7006BFB0D /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../../usr/local/Cellar/glfw/3.3.2/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 		ECCED71625670F31006BFB0D /* libassimp.5.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.5.0.0.dylib; path = ../../../../../../usr/local/Cellar/assimp/5.0.1/lib/libassimp.5.0.0.dylib; sourceTree = "<group>"; };
@@ -65,6 +85,20 @@
 		ECC24FEB2575B4720034354A /* imgui */ = {
 			isa = PBXGroup;
 			children = (
+				ECC24FF02575B52D0034354A /* imconfig.h */,
+				ECC24FF82575B52E0034354A /* imgui_demo.cpp */,
+				ECC24FF12575B52D0034354A /* imgui_draw.cpp */,
+				ECC24FEE2575B52D0034354A /* imgui_impl_glfw.cpp */,
+				ECC24FF62575B52E0034354A /* imgui_impl_glfw.h */,
+				ECC24FF32575B52E0034354A /* imgui_impl_opengl3.cpp */,
+				ECC24FF22575B52E0034354A /* imgui_impl_opengl3.h */,
+				ECC24FEC2575B52D0034354A /* imgui_internal.h */,
+				ECC24FF92575B52E0034354A /* imgui_widgets.cpp */,
+				ECC24FF72575B52E0034354A /* imgui.cpp */,
+				ECC24FF42575B52E0034354A /* imgui.h */,
+				ECC24FF52575B52E0034354A /* imstb_rectpack.h */,
+				ECC24FED2575B52D0034354A /* imstb_textedit.h */,
+				ECC24FEF2575B52D0034354A /* imstb_truetype.h */,
 			);
 			path = imgui;
 			sourceTree = "<group>";
@@ -173,6 +207,12 @@
 			files = (
 				ECF94F71255F723D002A574F /* main.cpp in Sources */,
 				ECCED71F25671173006BFB0D /* glad.c in Sources */,
+				ECC24FFC2575B52E0034354A /* imgui_impl_opengl3.cpp in Sources */,
+				ECC24FFF2575B52E0034354A /* imgui_widgets.cpp in Sources */,
+				ECC24FFA2575B52E0034354A /* imgui_impl_glfw.cpp in Sources */,
+				ECC24FFB2575B52E0034354A /* imgui_draw.cpp in Sources */,
+				ECC24FFE2575B52E0034354A /* imgui_demo.cpp in Sources */,
+				ECC24FFD2575B52E0034354A /* imgui.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
