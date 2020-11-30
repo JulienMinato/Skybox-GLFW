@@ -3,3 +3,4 @@
 ## Xcode artifacts
 project.xcworkspace
 xcuserdata
+*.xcuserstate
