@@ -62,6 +62,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ECC24FEB2575B4720034354A /* imgui */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = imgui;
+			sourceTree = "<group>";
+		};
 		ECCED71025670EC7006BFB0D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +100,7 @@
 		ECF94F6F255F723D002A574F /* Skybox */ = {
 			isa = PBXGroup;
 			children = (
+				ECC24FEB2575B4720034354A /* imgui */,
 				ECCED72A25671879006BFB0D /* Resources */,
 				ECCED71E25671173006BFB0D /* glad.c */,
 				ECCED72C256718B1006BFB0D /* filesystem.h */,
