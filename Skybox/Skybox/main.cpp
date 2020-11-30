@@ -82,7 +82,7 @@ int main()
     
 
     glfwMakeContextCurrent(window);
-    glfwSwapInterval(1); // Enable vsync
+
     
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     glfwSetCursorPosCallback(window, mouse_callback);
