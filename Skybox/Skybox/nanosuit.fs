@@ -15,19 +15,27 @@ uniform sampler2D texture_reflection1;
 
 void main()
 {
-//    float ratio = 1.00 / 2.45;
+//    float ratio = 1.00 / 1.52;
 //    vec3 I = normalize(Position - cameraPos);
 //    vec3 R = refract(I, normalize(Normal), ratio);
 //    FragColor = vec4(texture(skybox, R).rgb, 1.0);
+<<<<<<< HEAD
 
 //    vec3 I = normalize(Position - cameraPos);
 //    vec3 R = reflect(I, normalize(Normal));
 //    FragColor = vec4(texture(skybox, R).rgb, 1.0);
 
+=======
+    
+//    vec3 I = normalize(Position - cameraPos);
+//    vec3 R = reflect(I, normalize(Normal));
+//    FragColor = vec4(texture(skybox, R).rgb, 1.0);
+    
+>>>>>>> parent of d473e03... some updata
     
     vec3 viewDir = normalize(cameraPos - Position);
     vec3 normal = normalize(Normal);
-
+    
     vec3 R = reflect(- viewDir, normal);
     vec3 reflectMap = vec3(texture(texture_reflection1, TexCoords));
     vec3 reflection = vec3(texture(texture1, R).rgb) * reflectMap;
